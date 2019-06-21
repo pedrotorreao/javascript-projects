@@ -7,8 +7,13 @@ GAME RULES:
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
 - The first player to reach 100 points on GLOBAL score wins the game
 
+
+  Challenge 1 - A player loses his entire score when he rolls two 6s in a row. After that, it is the next player's turn.
+  Challenge 2 - Add an input field to the HTML where players can set the winning score, so that they can change the predefined
+                score of 100.
+  Challenge 3 - Add another dice to the game, so there are tow dices now. The player loses his score when one of them is a 1.
 */
-var scores, roundScore, activePlayer, gamePlaying;
+var scores, roundScore, activePlayer, gamePlaying, prevDice;
 
 init();
 
@@ -16,21 +21,24 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
   if (gamePlaying) {
     //1. random number
     var dice = Math.floor( Math.random() * 6 ) + 1;
+    //console.log(dice); //TESTING PURPOSES
 
     //2. display the result
     var diceDOM = document.querySelector('.dice');
     diceDOM.style.display = 'block';
     diceDOM.src = 'dice-' + dice + '.png';
 
-    //3. update the round score IF the rolled number was not 1
-    if (dice !== 1) {
+    //3. update the round score IF the rolled number was neither 1 nor two 6s in a row
+    if ((dice !== 1) && ((prevDice + dice) !== 12)) { 
       //Add score
       roundScore += dice;
+      prevDice = dice; //Stores the current value of dice which will soon be the previous
       document.querySelector('#current-'+activePlayer).textContent = roundScore;
     } else {
       //Next player
       nextPlayer();
     }
+
   }
 });
 

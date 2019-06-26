@@ -13,7 +13,7 @@ GAME RULES:
                 score of 100.
   Challenge 3 - Add another dice to the game, so there are tow dices now. The player loses his score when one of them is a 1.
 */
-var scores, roundScore, activePlayer, gamePlaying, prevDice;
+var scores, roundScore, activePlayer, gamePlaying, prevDice, prevDice2;
 
 init();
 
@@ -21,18 +21,30 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
   if (gamePlaying) {
     //1. random number
     var dice = Math.floor( Math.random() * 6 ) + 1;
-    //console.log(dice); //TESTING PURPOSES
+
+    /* -- Challenge 3 -- */ 
+    var dice2 = Math.floor( Math.random() * 6 ) + 1;
+    /* ----------------- */
+    
 
     //2. display the result
     var diceDOM = document.querySelector('.dice');
     diceDOM.style.display = 'block';
     diceDOM.src = 'dice-' + dice + '.png';
 
+    /* -- Challenge 3 -- */ 
+    var dice2DOM = document.querySelector('.dice--2');
+    dice2DOM.style.display = 'block';
+    dice2DOM.src = 'dice-' + dice2 + '.png';
+    /* ----------------- */
+
     //3. update the round score IF the rolled number was neither 1 nor two 6s in a row
-    if ((dice !== 1) && ((prevDice + dice) !== 12)) { 
+    if ((dice !== 1) && ((prevDice + dice) !== 12) && (dice2 !== 1) && ((prevDice2 + dice2) !== 12)) { 
       //Add score
-      roundScore += dice;
+      roundScore = roundScore + dice + dice2;
       prevDice = dice; //Stores the current value of dice which will soon be the previous
+      prevDice2 = dice2;
+
       document.querySelector('#current-'+activePlayer).textContent = roundScore;
     } else {
       //Next player
@@ -57,6 +69,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     if (scores[activePlayer] >= finalScore) {
       document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
       document.querySelector('.dice').style.display = 'none';
+      document.querySelector('.dice--2').style.display = 'none';
       document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
       document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
       gamePlaying = false;
@@ -79,6 +92,7 @@ function nextPlayer() {
 
     //Hide dice when switching players
     document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice--2').style.display = 'none';
 }
 
 document.querySelector('.btn-new').addEventListener('click',init);
@@ -94,6 +108,7 @@ function init() {
   //querySelector selecting/modifying the CSS element
   //setting the display property to none so the dice is not shown before the game begins
   document.querySelector('.dice').style.display = 'none';
+  document.querySelector('.dice--2').style.display = 'none';
 
   //Setting all the scores to zero initially
   document.getElementById('score-0').textContent = '0';

@@ -3,7 +3,9 @@ var budgetController = (function() {
   
 })();
 
+/* ------------------------------------------------------------------------------------------- */
 // UI CONTROLLER
+/* ------------------------------------------------------------------------------------------- */
 var UIController = (function() {
   
   var DOMstrings = {
@@ -25,30 +27,41 @@ var UIController = (function() {
     }
   };
 })();
-
+/* ------------------------------------------------------------------------------------------- */
 // GLOBAL APP CONTROLLER
+/* ------------------------------------------------------------------------------------------- */
 var controller = (function(budgetCtrl, UICtrl) {
   
-  var DOM = UICtrl.getDOMstrings();
+  var setupEventListeners = function() {
+    var DOM = UICtrl.getDOMstrings();
+
+    document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
+    document.addEventListener('keypress', function(event) {
+      if (event.keyCode === 13 || event.which === 13) {
+        ctrlAddItem();
+      }
+    });
+  }
+
 
   var ctrlAddItem = function() {
     // 1. GET THE FIELD INPUT DATA
     var input = UICtrl.getInput();
-    console.log(input);
+    //console.log(input);
 
     // 2. ADD THE ITEM TO THE BUDGET CONTROLLER 
     // 3. ADD THE ITEM TO THE UI
     // 4. CALCULATE THE BUDGET
     // 5. DISPLAY THE BUDGET
-    console.log('Uhuuuul');
-  }
+  };
 
-  document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
-
-  document.addEventListener('keypress', function(event) {
-    if (event.keyCode === 13 || event.which === 13) {
-      ctrlAddItem();
+  return {
+    init: function() {
+      console.log('Application has started.');
+      setupEventListeners();
     }
-  });
+  };
 
 })(budgetController, UIController);
+
+controller.init();

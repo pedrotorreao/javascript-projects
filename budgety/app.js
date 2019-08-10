@@ -2,6 +2,8 @@
 // BUDGET CONTROLLER
 /* -------------------------------------------------------------------------------------*/
 var budgetController = (function() {
+  // Immediatelly Invoked Function Expression: it allows us to have data privacy because it 
+  // creates a new scope which is not visible from the outside scope.
   
   var Expense = function(id, description, value) {
     this.id = id;
@@ -133,13 +135,15 @@ var budgetController = (function() {
     }
   };
   
-})();
+})(); // Immediatelly Invoked Function Expression
 
 /* -------------------------------------------------------------------------------------*/
 // UI CONTROLLER
 /* -------------------------------------------------------------------------------------*/
 var UIController = (function() {
-  
+  // Immediatelly Invoked Function Expression: it allows us to have data privacy because it 
+  // creates a new scope which is not visible from the outside scope.
+
   var DOMstrings = {
     inputType: '.add__type',
     inputDescription: '.add__description',
@@ -247,11 +251,19 @@ var UIController = (function() {
 // GLOBAL APP CONTROLLER
 /* -------------------------------------------------------------------------------------*/
 var controller = (function(budgetCtrl, UICtrl) {
-  
+  // Immediatelly Invoked Function Expression: it allows us to have data privacy because it 
+  // creates a new scope which is not visible from the outside scope.
+
+  // This module has access to the other two independent methods
   var setupEventListeners = function() {
     var DOM = UICtrl.getDOMstrings();
 
+    // Event listener for the button to enter the expenses/incomes -- click option
+    // If the assigned button is clicked, call the ctrlAddItem function
     document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
+
+    // Event listener for the button to enter the expenses/incomes -- ENTER option (keycode = 13)
+    // If the ENTER key is pressed, call the ctrlAddItem function
     document.addEventListener('keypress', function(event) {
       if (event.keyCode === 13 || event.which === 13) {
         ctrlAddItem();
@@ -345,6 +357,6 @@ var controller = (function(budgetCtrl, UICtrl) {
     }
   };
 
-})(budgetController, UIController);
+})(budgetController, UIController); // Passing the other two controllers as arguments
 
 controller.init();

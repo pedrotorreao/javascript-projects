@@ -144,7 +144,7 @@ var UIController = (function() {
   // Immediatelly Invoked Function Expression: it allows us to have data privacy because it 
   // creates a new scope which is not visible from the outside scope.
 
-  var DOMstrings = {
+  var DOMstrings = { // Object intended to keep all the strings
     inputType: '.add__type',
     inputDescription: '.add__description',
     inputValue: '.add__value',
@@ -161,8 +161,8 @@ var UIController = (function() {
 
   return {
     getInput: function() {
-      return {
-        type: document.querySelector(DOMstrings.inputType).value,
+      return { //To be able to return all values, assign them to an object instead of a variable
+        type: document.querySelector(DOMstrings.inputType).value, //Whether it is an Income or an Expense
         description: document.querySelector(DOMstrings.inputDescription).value,
         value: parseFloat(document.querySelector(DOMstrings.inputValue).value)
       };
@@ -242,7 +242,7 @@ var UIController = (function() {
 
     },
 
-    getDOMstrings: function() {
+    getDOMstrings: function() { // In order to be able to access the strings from the other methods
       return DOMstrings;
     }
   };
@@ -255,7 +255,7 @@ var controller = (function(budgetCtrl, UICtrl) {
   // creates a new scope which is not visible from the outside scope.
 
   // This module has access to the other two independent methods
-  var setupEventListeners = function() {
+  var setupEventListeners = function() { // Intended to keep all the event listeners
     var DOM = UICtrl.getDOMstrings();
 
     // Event listener for the button to enter the expenses/incomes -- click option
@@ -299,7 +299,7 @@ var controller = (function(budgetCtrl, UICtrl) {
   var ctrlAddItem = function() {
     var input, newItem;
 
-    // 1. GET THE FIELD INPUT DATA
+    // 1. GET THE FIELD INPUT DATA FROM THE UI CONTROLLER
     input = UICtrl.getInput();
 
     if(input.description !== "" && !isNaN(input.value) && input.value > 0) {
@@ -344,7 +344,7 @@ var controller = (function(budgetCtrl, UICtrl) {
     }
   };
 
-  return {
+  return { // Initialization function
     init: function() {
       console.log('Application has started.');
       UICtrl.displayBudget({
@@ -359,4 +359,4 @@ var controller = (function(budgetCtrl, UICtrl) {
 
 })(budgetController, UIController); // Passing the other two controllers as arguments
 
-controller.init();
+controller.init(); // Calling the inialization function

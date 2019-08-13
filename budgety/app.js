@@ -162,20 +162,23 @@ var UIController = (function() {
   var formatNumber = function(num, type) {
     var numSplit, int, dec, type;
 
-    //.abs: It gets the absolute part of num using the Math object .abs
+    //Math '.abs' method: It gets the absolute part of num
     num = Math.abs(num); 
-    num = num.toFixed(2); //It 
+    //Number '.toFixed' method: It converts the number to a string so it can use its methods
+    num = num.toFixed(2);
 
+    //Number '.split' method: It creates an array with the separated strings
     numSplit = num.split('.');
 
-    int = numSplit[0];
+    int = numSplit[0]; //It gets the integer part
     if(int.length > 3) {
+      //In case the integer part is greater than a thousand, add a comma
       int = int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3);
     }
 
-    dec = numSplit[1];
+    dec = numSplit[1]; //It gets the decimal part
 
-    return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec;
+    return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec; //Returns formatted number
   };
 
   return {
@@ -231,7 +234,11 @@ var UIController = (function() {
     },
 
     displayBudget: function(obj) {
-      document.querySelector(DOMstrings.budgetLabel).textContent = obj.budget;
+      var type;
+
+      obj.budget > 0 ? type = 'inc' : type = 'exp';
+
+      document.querySelector(DOMstrings.budgetLabel).textContent = formatNumber(obj.budget, type);
       document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc;
       document.querySelector(DOMstrings.expensesLabel).textContent = obj.totalExp;
       

@@ -5,14 +5,14 @@ var budgetController = (function() {
   // Immediatelly Invoked Function Expression: it allows us to have data privacy because it 
   // creates a new scope which is not visible from the outside scope.
   
-  var Expense = function(id, description, value) {
+  var Expense = function(id, description, value) { //Function constructor for the expenses
     this.id = id;
     this.description = description;
     this.value = value;
     this.percentage = -1;
   };
 
-  Expense.prototype.calcPercentage = function(totalIncome) {
+  Expense.prototype.calcPercentage = function(totalIncome) {// Prototype method for calculating the percentages
     if(totalIncome > 0) {
       this.percentage = Math.round((this.value / totalIncome) * 100);
     } else {
@@ -24,7 +24,7 @@ var budgetController = (function() {
     return this.percentage;
   }
 
-  var Income = function(id, description, value) {
+  var Income = function(id, description, value) { //Function constructor for the incomes
     this.id = id;
     this.description = description;
     this.value = value;
@@ -38,12 +38,12 @@ var budgetController = (function() {
     data.totals[type] = sum;
   };
 
-  var data = {
+  var data = { //Object that stores all the data
     allItems: {
-      exp: [],
-      inc: []
+      exp: [], //Array for the expenses
+      inc: []  //Array for the incomes
     },
-    totals: {
+    totals: {  
       exp: 0,
       inc: 0
     },
@@ -52,7 +52,7 @@ var budgetController = (function() {
   };
 
   return {
-    addItem: function(type, des, val) {
+    addItem: function(type, des, val) {//Method that allows other methods to add new items
       var newItem, ID;
 
       // Create new ID
@@ -62,7 +62,7 @@ var budgetController = (function() {
         ID = 0;
       }
       
-      // Create new item based on 'inc' or 'exp' type
+      // Create new item using the respective Function Constructor based on 'inc' or 'exp' type
       if (type === 'exp') {
         newItem = new Expense(ID, des, val);
       } else if (type === 'inc') {
@@ -144,7 +144,7 @@ var UIController = (function() {
   // Immediatelly Invoked Function Expression: it allows us to have data privacy because it 
   // creates a new scope which is not visible from the outside scope.
 
-  var DOMstrings = { // Object intended to keep all the strings
+  var DOMstrings = { // Object intended to keep all the strings related to query selectors
     inputType: '.add__type',
     inputDescription: '.add__description',
     inputValue: '.add__value',
@@ -191,7 +191,7 @@ var UIController = (function() {
   return {
     getInput: function() {
       return { //To be able to return all values, assign them to an object instead of a variable
-        type: document.querySelector(DOMstrings.inputType).value, //Whether it is an Income or an Expense
+        type: document.querySelector(DOMstrings.inputType).value, //If it is an Inc or an Exp
         description: document.querySelector(DOMstrings.inputDescription).value,
         value: parseFloat(document.querySelector(DOMstrings.inputValue).value)
       };
@@ -298,7 +298,7 @@ var UIController = (function() {
       document.querySelector(DOMstrings.inputBtn).classList.toggle('red');
     },
 
-    getDOMstrings: function() { // In order to be able to access the strings from the other methods
+    getDOMstrings: function() {// In order to be able to access the strings from the other controllers
       return DOMstrings;
     }
   };
@@ -312,13 +312,13 @@ var controller = (function(budgetCtrl, UICtrl) {
 
   // This module has access to the other two independent methods
   var setupEventListeners = function() { // Intended to keep all the event listeners
-    var DOM = UICtrl.getDOMstrings();
+    var DOM = UICtrl.getDOMstrings();// Access the query strings on the UI Controller
 
     // Event listener for the button to enter the expenses/incomes -- click option
     // If the assigned button is clicked, call the ctrlAddItem function
     document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
 
-    // Event listener for the button to enter the expenses/incomes -- ENTER option (keycode = 13)
+    // Event listener for the button to enter the expenses/incomes--ENTER option (keycode = 13)
     // If the ENTER key is pressed, call the ctrlAddItem function
     document.addEventListener('keypress', function(event) {
       if (event.keyCode === 13 || event.which === 13) {
@@ -406,7 +406,7 @@ var controller = (function(budgetCtrl, UICtrl) {
     init: function() {
       console.log('Application has started.');
       UICtrl.displayMonth();
-      UICtrl.displayBudget({
+      UICtrl.displayBudget({ //Sets all initial values to zero initially
         budget: 0,
         totalInc: 0,
         totalExp: 0,

@@ -197,10 +197,10 @@ var UIController = (function() {
       };
     },
 
-    addListItem: function(obj, type) {
+    addListItem: function(obj, type) { //Function that adds new list items to the UI
       var html, newHtml, element;
 
-      // Create HTML string with placeholder text
+      // Create HTML string with placeholder text based on the type of input
       if (type === 'inc') {
         element = DOMstrings.incomeContainer;
 
@@ -226,15 +226,15 @@ var UIController = (function() {
       el.parentNode.removeChild(el);
     },
 
-    clearFields: function() {
+    clearFields: function() {//Clear HTML input fields after each new entry
       var fields, fieldsArr;
 
       fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
 
-      fieldsArr = Array.prototype.slice.call(fields);
+      fieldsArr = Array.prototype.slice.call(fields); //Array prototype method 'slice'
 
       fieldsArr.forEach(function(current, index, array) {
-        current.value = "";
+        current.value = ""; //Set back to empty
       });
 
       fieldsArr[0].focus();
@@ -354,7 +354,7 @@ var controller = (function(budgetCtrl, UICtrl) {
   }
 
 
-  var ctrlAddItem = function() {
+  var ctrlAddItem = function() { //Function called whenever the button is clicked or the ENTER key is pressed
     var input, newItem;
 
     // 1. GET THE FIELD INPUT DATA FROM THE UI CONTROLLER

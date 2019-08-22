@@ -31,8 +31,8 @@ var budgetController = (function() {
   };
 
   var calculateTotal = function(type) {
-    var sum = 0;
-    data.allItems[type].forEach(function(cur) {
+    var sum = 0; //Initial value
+    data.allItems[type].forEach(function(cur) { //For each element on data.allItems, calculate sum
       sum += cur.value;
     });
     data.totals[type] = sum;
@@ -121,7 +121,7 @@ var budgetController = (function() {
       return allPerc;
     },
 
-    getBudget: function() {
+    getBudget: function() {// Returns the calculated data so it can be used on other controllers
       return {
         budget: data.budget,
         totalInc: data.totals.inc,
@@ -194,6 +194,7 @@ var UIController = (function() {
         type: document.querySelector(DOMstrings.inputType).value, //If it is an Inc or an Exp
         description: document.querySelector(DOMstrings.inputDescription).value,
         value: parseFloat(document.querySelector(DOMstrings.inputValue).value)
+        //parserFloat takes a string and converts it to a number assigning the result to the property 'value'
       };
     },
 
@@ -237,7 +238,7 @@ var UIController = (function() {
         current.value = ""; //Set back to empty
       });
 
-      fieldsArr[0].focus();
+      fieldsArr[0].focus(); //Setting the focus back to the first input field
     },
 
     displayBudget: function(obj) {
@@ -359,8 +360,8 @@ var controller = (function(budgetCtrl, UICtrl) {
 
     // 1. GET THE FIELD INPUT DATA FROM THE UI CONTROLLER
     input = UICtrl.getInput();
-
-    if(input.description !== "" && !isNaN(input.value) && input.value > 0) {
+      //Check if a valid input was entered
+    if(input.description !== "" && !isNaN(input.value) && input.value > 0) { //isNan() checks if the value passed is NaN
       // 2. ADD THE ITEM TO THE BUDGET CONTROLLER 
       newItem =  budgetCtrl.addItem(input.type, input.description, input.value);
 

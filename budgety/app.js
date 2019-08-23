@@ -76,7 +76,7 @@ var budgetController = (function() {
       return newItem;
     },
 
-    deleteItem: function(type, id) {
+    deleteItem: function(type, id) { //
       var ids, index;
 
       ids = data.allItems[type].map(function(current) {
@@ -246,11 +246,11 @@ var UIController = (function() {
 
       obj.budget > 0 ? type = 'inc' : type = 'exp';
 
-      document.querySelector(DOMstrings.budgetLabel).textContent = formatNumber(obj.budget, type);
-      document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc;
-      document.querySelector(DOMstrings.expensesLabel).textContent = obj.totalExp;
+      document.querySelector(DOMstrings.budgetLabel).textContent = formatNumber(obj.budget, type); //Change the displayed budget value
+      document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc; //Change the displayed income value
+      document.querySelector(DOMstrings.expensesLabel).textContent = obj.totalExp; //Change the displayed wxpense value
       
-      if (obj.percentage > 0) {
+      if (obj.percentage > 0) { //Checks if the percentage is valid value
         document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage + '%';
       } else {
         document.querySelector(DOMstrings.percentageLabel).textContent = '---';
@@ -380,13 +380,13 @@ var controller = (function(budgetCtrl, UICtrl) {
 
   };
 
-  var ctrlDeleteItem = function(event) {
+  var ctrlDeleteItem = function(event) { //Delete list item when the delete button is clicked
     var itemID, splitID, type, ID;
 
-    itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
+    itemID = event.target.parentNode.parentNode.parentNode.parentNode.id; //Going up in the HTML hierarchy
 
     if(itemID) {
-      splitID = itemID.split('-');
+      splitID = itemID.split('-'); //Splits the strings when it encounters a '-'
       type = splitID[0];
       ID = parseInt(splitID[1]);
       // 1. DELETE THE ITEM FROM THE STRUCTURE
@@ -407,7 +407,7 @@ var controller = (function(budgetCtrl, UICtrl) {
     init: function() {
       console.log('Application has started.');
       UICtrl.displayMonth();
-      UICtrl.displayBudget({ //Sets all initial values to zero initially
+      UICtrl.displayBudget({ //Sets all initial values to zero
         budget: 0,
         totalInc: 0,
         totalExp: 0,

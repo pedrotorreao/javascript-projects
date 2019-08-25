@@ -79,14 +79,17 @@ var budgetController = (function() {
     deleteItem: function(type, id) { //
       var ids, index;
 
-      ids = data.allItems[type].map(function(current) {
+      ids = data.allItems[type].map(function(current) { //map returns a brand new array
         return current.id;
       });
 
       index = ids.indexOf(id);
 
-      if (index !== -1) {
-        data.allItems[type].splice(index, 1);
+      if (index !== -1) { //Delete if the number is valid
+        data.allItems[type].splice(index, 1); 
+        //splice van be used to remove elements. It takes two arguments, the first one is the 
+        //position number from where you want to start deleting and the second one is the number
+        //of elements you want to delete
       }
     },
 
@@ -388,7 +391,7 @@ var controller = (function(budgetCtrl, UICtrl) {
     if(itemID) {
       splitID = itemID.split('-'); //Splits the strings when it encounters a '-'
       type = splitID[0];
-      ID = parseInt(splitID[1]);
+      ID = parseInt(splitID[1]); //parseInt converts a string to a number (no decimals)
       // 1. DELETE THE ITEM FROM THE STRUCTURE
       budgetCtrl.deleteItem(type, ID);
 

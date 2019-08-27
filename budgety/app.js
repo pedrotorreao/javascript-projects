@@ -13,7 +13,7 @@ var budgetController = (function() {
   };
 
   Expense.prototype.calcPercentage = function(totalIncome) {// Prototype method for calculating the percentages
-    if(totalIncome > 0) {
+    if(totalIncome > 0) { //Checks if the income is a valid value
       this.percentage = Math.round((this.value / totalIncome) * 100);
     } else {
       this.percentage = -1;
@@ -110,7 +110,7 @@ var budgetController = (function() {
       
     },
 
-    calculatePercentages: function() {
+    calculatePercentages: function() {//Calculate the percentages of the expenses based on the total income
       data.allItems.exp.forEach(function(cur) {
         cur.calcPercentage(data.totals.inc);
       });
@@ -260,10 +260,8 @@ var UIController = (function() {
       }
     },
 
-    displayPercentages: function(percentages) {
-      var fields = document.querySelectorAll(DOMstrings.expensesPercLabel);
-
-      
+    displayPercentages: function(percentages) { //Display the percentages on the UI
+      var fields = document.querySelectorAll(DOMstrings.expensesPercLabel);//It returns a node list
 
       nodeListForEach(fields, function(current, index) {
         if(percentages[index] > 0) {

@@ -163,7 +163,7 @@ var UIController = (function() {
     dateLabel: '.budget__title--month'
   };
 
-  var formatNumber = function(num, type) {
+  var formatNumber = function(num, type) {//Function to put the numbers shown on the UI 
     var numSplit, int, dec, type;
 
     //Math '.abs' method: It gets the absolute part of num
@@ -180,7 +180,7 @@ var UIController = (function() {
       int = int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3);
     }
 
-    dec = numSplit[1]; //It gets the decimal part
+    dec = numSplit[1]; //It gets the decimal part, separated using a dot
 
     return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec; //Returns formatted number
   };
@@ -273,7 +273,7 @@ var UIController = (function() {
 
     },
 
-    displayMonth: function() {
+    displayMonth: function() { // Method to display the correct Date on the UI
       var now, months, month, year;
 
       now = new Date();
@@ -286,7 +286,7 @@ var UIController = (function() {
       document.querySelector(DOMstrings.dateLabel).textContent = months[month] + ' ' + year;
     },
 
-    changedType: function() {
+    changedType: function() { // Change the collor of the input fields depending on whether they are an 'inc' or an 'exp'
       var fields = document.querySelectorAll(
         DOMstrings.inputType + ',' +
         DOMstrings.inputDescription + ',' +
@@ -297,7 +297,7 @@ var UIController = (function() {
         cur.classList.toggle('red-focus');
       });
 
-      document.querySelector(DOMstrings.inputBtn).classList.toggle('red');
+      document.querySelector(DOMstrings.inputBtn).classList.toggle('red'); //Changes the color of the submit button
     },
 
     getDOMstrings: function() {// In order to be able to access the strings from the other controllers

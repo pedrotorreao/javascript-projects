@@ -1,17 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  background-image: linear-gradient(
+    to right bottom,
+    #adf9f9,
+    #baf7e1,
+    #d0f3ca,
+    #e9ecbc,
+    #ffe3b9
+  );
 }
 
 .container {
@@ -30,11 +39,11 @@ body {
   flex: 0.5;
   margin: 10px;
   position: relative;
-  transition: flex 0.7s ease-in;
+  transition: flex 0.5s ease-in;
 }
 
 .panel h3 {
-  font-size: 24px;
+  font-size: 28px;
   position: absolute;
   bottom: 20px;
   left: 20px;

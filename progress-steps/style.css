@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+/* :root -: allows us to target the highest-level “parent” element in the DOM. In this case,
+we use this pseudo-selector to define variable for colors which is valid for the whole page.*/
 :root {
   --line-border-fill: #66cdaa;
   --line-border-empty: #dbd5df;
 }
-
+/* box-sizing -: property in CSS controls how the box model is handled for the element 
+it applies to. Setting the value of box-sizing toborder-box means that the width and height 
+values apply to the content, padding, and border.
+*/
 * {
   box-sizing: border-box;
 }
@@ -16,7 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /*controls what happens to content that breaks outside of its bounds*/
   margin: 0;
 }
 
@@ -37,8 +42,8 @@ body {
   content: "";
   background-color: var(--line-border-empty);
   position: absolute;
-  top: 50%; /*ditance where the line begins from the top*/
-  left: 0; /*ditance where the line begins from the left*/
+  top: 50%; /*distance where the line begins from the top*/
+  left: 0; /*distance where the line begins from the left*/
   transform: translateY(-50%);
   height: 5px; /*line heigth*/
   width: 100%; /*line width from 1 (start) to 2.5 (middle)*/
@@ -48,8 +53,8 @@ body {
 .progress {
   background-color: var(--line-border-fill);
   position: absolute;
-  top: 50%; /*ditance where the line begins from the top*/
-  left: 0; /*ditance where the line begins from the left*/
+  top: 50%; /*distance where the line begins from the top*/
+  left: 0; /*distance where the line begins from the left*/
   transform: translateY(-50%);
   height: 5px; /*line heigth*/
   width: 0%; /*line width from 1 (start) to 2.5 (middle)*/

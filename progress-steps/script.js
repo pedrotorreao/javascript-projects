@@ -1,6 +1,8 @@
 const progress = document.getElementById('progress');
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
+const first = document.getElementById('first');
+const last = document.getElementById('last');
 const circles = document.querySelectorAll('.circle');
 
 let currentlyActive = 1;
@@ -23,6 +25,18 @@ prev.addEventListener('click', () => {
     updateDOM();
 });
 
+first.addEventListener('click', () => {
+    currentlyActive = 1;
+
+    updateDOM();
+});
+
+last.addEventListener('click', () => {
+    currentlyActive = circles.length;
+
+    updateDOM();
+});
+
 function updateDOM() {
     circles.forEach( (circle, idx) => {
         if(idx < currentlyActive) {
@@ -39,12 +53,22 @@ function updateDOM() {
 
     if(currentlyActive === 1) {
         prev.disabled = true;
+        first.disabled = true;
+
+        next.disabled = false;
+        last.disabled = false;
     }
     else if (currentlyActive === circles.length) {
         next.disabled = true;
+        last.disabled = true;
+
+        prev.disabled = false;
+        first.disabled = false;
     } 
     else {
         prev.disabled = false;
         next.disabled = false;
+        first.disabled = false;
+        last.disabled = false;
     }
 }

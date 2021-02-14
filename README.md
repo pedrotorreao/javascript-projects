@@ -10,4 +10,4 @@
 * ### Progress Steps
 * ### Rotating Navigation
 * ### Hidden Search
-  
+* ### Blurry Loading  

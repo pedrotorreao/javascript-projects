@@ -12,3 +12,5 @@ Repository intended to keep track of the projects I've built while learning JS, 
 * #### Hidden Search
 * #### Blurry Loading  
 * #### Scroll Animation
+* #### Split Landing Page
+* #### Form Wave Animation

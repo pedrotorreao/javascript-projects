@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: seashell;
+  background-color: #333d79ff;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
@@ -17,16 +17,17 @@ body {
 
 h1 {
   margin: 10px;
+  color: #a1a1a1ff;
 }
 
 .box {
-  background-color: royalblue;
-  color: ghostwhite; /*font color*/
+  background-color: #a1a1a1ff;
+  color: #00539cff; /*font color*/
   display: flex; /*display each div .box as a flez container*/
   align-items: center; /*center the content inside the div*/
   justify-content: center; /*center the content inside the div*/
-  width: 500px;
-  height: 250px;
+  width: 75vw;
+  height: 25vh;
   margin: 15px;
   border-radius: 15px;
   box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.6);

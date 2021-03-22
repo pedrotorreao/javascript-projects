@@ -19,3 +19,4 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - #### Form Wave Animation
 - #### Soundboard
 - #### Dad Jokes
+- #### Kinetic CSS Loader

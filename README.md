@@ -23,3 +23,4 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - #### Faq Collapse
 - #### Incrementing Counter
 - #### Button Ripple Effect
+- #### Random Choice Picker

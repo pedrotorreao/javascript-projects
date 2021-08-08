@@ -24,3 +24,10 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - #### Incrementing Counter
 - #### Button Ripple Effect
 - #### Random Choice Picker
+- #### Animated Navigation
+- #### Auto-text Effect
+- #### Drag and Drop
+- #### Drink Water
+- #### Event Keycodes
+- #### Theme Clock
+- #### Good, Cheap, Fast

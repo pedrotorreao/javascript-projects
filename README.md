@@ -1,6 +1,6 @@
 ## Javascript - Projects
 
-Repository intended to keep track of the projects I've built while learning JS, so most likely all the projects will be tweaked versions of projects from some course/tutorial I've watched and not my own ideas.
+Repository intended to keep track of the projects I've built while learning JS, so most likely some of the projects will be tweaked versions of projects from courses/tutorials that I've watched and not my own ideas. Click on the project names for preview.
 
 ### **Project list**
 
@@ -19,10 +19,22 @@ Repository intended to keep track of the projects I've built while learning JS, 
 
   Cool animation for expanding images as cards.
 
-- #### Progress Steps
-- #### Rotating Navigation
-- #### Hidden Search
-- #### Blurry Loading
+- ### [Progress Steps](https://codepen.io/ptorr/pen/RwxmLjv)
+
+  Animation for ilustrating progress steps.
+
+- ### [Rotating Navigation](https://codepen.io/ptorr/pen/QWaRqQy)
+
+  Rotate page to display navigation options.
+
+- ### [Hidden Search](https://codepen.io/ptorr/pen/jOYoGzr)
+
+  Hidden search bar behind button.
+
+- ### [Blurry Loading](https://codepen.io/ptorr/pen/bGayoYN)
+
+  Blurry load an image background.
+
 - #### Scroll Animation
 - #### Split Landing Page
 - #### Form Wave Animation
@@ -41,7 +53,10 @@ Repository intended to keep track of the projects I've built while learning JS, 
 
   App that asks the user for a text input and displays it in the screen as if it was being typed.
 
-- #### Drag and Drop
+- ### [Drag and Drop](https://codepen.io/ptorr/pen/popmWVN)
+
+  Simple Drag and Drop interface.
+
 - #### Drink Water
 - #### Event Keycodes
 - #### Theme Clock

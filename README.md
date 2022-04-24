@@ -6,10 +6,19 @@ Repository intended to keep track of the projects I've built while learning JS, 
 
 #### _Vanilla JS_
 
-- #### Budgety
+- ### [Budgety](https://codepen.io/ptorr/pen/popmJvj)
+
+  Simple budget application.
+
 - #### Pig Game
-- #### Minesweeper
-- #### Expanding Cards
+- ### [Minesweeper](https://codepen.io/ptorr/pen/xxpNGVP)
+
+  Minesweeper game from a tutorial by Ania Kubów.
+
+- ### [Expanding Cards](https://codepen.io/ptorr/pen/KKZLpmM)
+
+  Cool animation for expanding images as cards.
+
 - #### Progress Steps
 - #### Rotating Navigation
 - #### Hidden Search
@@ -24,8 +33,14 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - #### Incrementing Counter
 - #### Button Ripple Effect
 - #### Random Choice Picker
-- #### Animated Navigation
-- #### Auto-text Effect
+- ### [Animated Navigation](https://codepen.io/ptorr/pen/GRywNNm)
+
+  Simple animated navigation bar.
+
+- ### [Auto-text Effect](https://codepen.io/ptorr/pen/vYpQygg)
+
+  App that asks the user for a text input and displays it in the screen as if it was being typed.
+
 - #### Drag and Drop
 - #### Drink Water
 - #### Event Keycodes

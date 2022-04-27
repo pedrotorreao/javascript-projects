@@ -35,7 +35,10 @@ Repository intended to keep track of the projects I've built while learning JS, 
 
   Blurry load an image background.
 
-- #### Scroll Animation
+- ### [Scroll Animation](https://codepen.io/ptorr/pen/VwyJJXJ)
+
+  Animation that loads new windows as the window is scrolled.
+
 - #### Split Landing Page
 - #### Form Wave Animation
 - #### Soundboard
@@ -51,8 +54,14 @@ Repository intended to keep track of the projects I've built while learning JS, 
 
   FAQ form example with collapse/expand functionality.
 
-- #### Incrementing Counter
-- #### Button Ripple Effect
+- ### [Incrementing Counter](https://codepen.io/ptorr/pen/vYpqqaB)
+
+  Incremental counter for social media information.
+
+- ### [Button Ripple Effect](https://codepen.io/ptorr/pen/BaJggOL)
+
+  Simple button ripple effect.
+
 - #### Random Choice Picker
 - ### [Animated Navigation](https://codepen.io/ptorr/pen/GRywNNm)
 

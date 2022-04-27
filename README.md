@@ -39,9 +39,18 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - #### Split Landing Page
 - #### Form Wave Animation
 - #### Soundboard
-- #### Dad Jokes
-- #### Kinetic CSS Loader
-- #### Faq Collapse
+- ### [Dad Jokes](https://codepen.io/ptorr/pen/vYpqqJq)
+
+  Simple app that displays a joke fetched from an API.
+
+- ### [Kinetic CSS Loader](https://codepen.io/ptorr/pen/QWaXXap)
+
+  Nice loading animation made only with HTML and CSS.
+
+- ### [Faq Collapse](https://codepen.io/ptorr/pen/bGaPPLw)
+
+  FAQ form example with collapse/expand functionality.
+
 - #### Incrementing Counter
 - #### Button Ripple Effect
 - #### Random Choice Picker

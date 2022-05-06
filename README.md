@@ -79,6 +79,6 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - #### Event Keycodes
 - #### Theme Clock
 - #### Good, Cheap, Fast
-- ### [Background Slider](https://codepen.io/ptorr/pen/WNMQEgv)
+- ### [Background Slider](https://codepen.io/ptorr/pen/WNMQEgv){:target="\_blank"}
 
   A smooth background image slider.

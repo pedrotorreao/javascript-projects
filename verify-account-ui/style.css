@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:300,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(35, 33, 37);
+  font-family: "Muli", sans-serif;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(61, 60, 63);
+  border: 4px rgb(121, 121, 121) solid;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 900px;
+  text-align: center;
+}
+
+.code-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.code {
+  border-radius: 5px;
+  font-size: 75px;
+  height: 100px;
+  width: 80px;
+  border: 2px rgb(121, 121, 121) solid;
+  margin: 1%;
+  text-align: center;
+  font-weight: 300;
+  /* Get rid of the incr./decr. arrows - Firefox */
+  -moz-appearance: textfield;
+}
+
+/* Get rid of the incr./decr. arrows - Firefox */
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+/* Get rid of the incr./decr. arrows - Chrome and Safari */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* Alternative */
+/* input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+} */
+
+.code:valid {
+  border: 4px rgb(10, 112, 10) solid;
+  box-shadow: 0 10px 10px -5px rgb(10, 112, 10);
+}
+
+
+.info {
+  background-color: rgb(156, 156, 156);
+  display: inline-block;
+  padding: 10px;
+  line-height: 20px;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .code-container {
+    flex-wrap: wrap;
+  }
+
+  .code {
+    font-size: 60px;
+    height: 80px;
+    max-width: 70px;
+  }
+}

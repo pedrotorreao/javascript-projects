@@ -82,3 +82,7 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - ### [Background Slider](https://codepen.io/ptorr/pen/WNMQEgv)
 
   A smooth background image slider.
+
+- ### [Verify Account UI](https://codepen.io/ptorr/pen/VwQerop)
+
+  Simple authentication code validator UI.

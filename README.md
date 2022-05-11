@@ -86,3 +86,7 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - ### [Verify Account UI](https://codepen.io/ptorr/pen/VwQerop)
 
   Simple authentication code validator UI.
+
+- ### [Password Strength Background](https://codepen.io/ptorr/pen/vYdKgPL)
+
+  Change the blur effect on a background image in a login screen based on the strength of the password entered.

@@ -90,3 +90,7 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - ### [Password Strength Background](https://codepen.io/ptorr/pen/vYdKgPL)
 
   Change the blur effect on a background image in a login screen based on the strength of the password entered.
+
+- ### [Mobile Tab Navigation](https://codepen.io/ptorr/pen/NWyREpG)
+
+  Navigation bar with a background image that changes depending on the selected option.

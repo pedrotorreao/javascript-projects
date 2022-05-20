@@ -94,3 +94,7 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - ### [Mobile Tab Navigation](https://codepen.io/ptorr/pen/NWyREpG)
 
   Navigation bar with a background image that changes depending on the selected option.
+
+- ### [Toast Notification](https://codepen.io/ptorr/pen/oNEwjgj)
+
+  Example of a simple UI for logging notification messages.

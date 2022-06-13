@@ -98,3 +98,7 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - ### [Toast Notification](https://codepen.io/ptorr/pen/oNEwjgj)
 
   Example of a simple UI for logging notification messages.
+
+- ### [Random Image Feed](https://codepen.io/ptorr/pen/mdXaRpb)
+
+  Simple image feed, good for learning a bit more of how to add elements to the DOM.

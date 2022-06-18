@@ -10,7 +10,10 @@ Repository intended to keep track of the projects I've built while learning JS, 
 
   Simple budget application.
 
-- #### Pig Game
+- ### Pig Game
+
+  _Uploading assets is a pro feature on CodePen_
+
 - ### [Minesweeper](https://codepen.io/ptorr/pen/xxpNGVP)
 
   Minesweeper game from a tutorial by Ania Kubów.
@@ -39,9 +42,18 @@ Repository intended to keep track of the projects I've built while learning JS, 
 
   Animation that loads new windows as the window is scrolled.
 
-- #### Split Landing Page
-- #### Form Wave Animation
+- ### Split Landing Page
+
+  _Uploading assets is a pro feature on CodePen_
+
+- ### [Form Wave Animation](https://codepen.io/ptorr/pen/ExQJKoY)
+
+  Simple login form with labels animated once clicked.
+
 - #### Soundboard
+
+  _Uploading assets is a pro feature on CodePen_
+
 - ### [Dad Jokes](https://codepen.io/ptorr/pen/vYpqqJq)
 
   Simple app that displays a joke fetched from an API.
@@ -62,7 +74,10 @@ Repository intended to keep track of the projects I've built while learning JS, 
 
   Simple button ripple effect.
 
-- #### Random Choice Picker
+- ### [Random Choice Picker](https://codepen.io/ptorr/pen/MWQRyrL)
+
+  Cool mini-project for learning a lot about how to interact with the DOM, modifying CSS properties and some simple Javascript concepts.
+
 - ### [Animated Navigation](https://codepen.io/ptorr/pen/GRywNNm)
 
   Simple animated navigation bar.
@@ -75,10 +90,14 @@ Repository intended to keep track of the projects I've built while learning JS, 
 
   Simple Drag and Drop interface.
 
-- #### Drink Water
-- #### Event Keycodes
-- #### Theme Clock
-- #### Good, Cheap, Fast
+- ### [Drink Water](https://codepen.io/ptorr/pen/bGLJpKM)
+
+- ### [Event Keycodes](https://codepen.io/ptorr/pen/abqxNjO)
+
+- ### [Theme Clock](https://codepen.io/ptorr/pen/NWymNBB)
+
+- ### [Good, Cheap, Fast](https://codepen.io/ptorr/pen/qBxwZMZ)
+
 - ### [Background Slider](https://codepen.io/ptorr/pen/WNMQEgv)
 
   A smooth background image slider.

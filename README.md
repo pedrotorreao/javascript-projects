@@ -102,3 +102,7 @@ Repository intended to keep track of the projects I've built while learning JS, 
 - ### [Random Image Feed](https://codepen.io/ptorr/pen/mdXaRpb)
 
   Simple image feed, good for learning a bit more of how to add elements to the DOM.
+
+- ### [Image Caroussel](https://codepen.io/ptorr/pen/QWQPNqx)
+
+  Image carousel, good for learning a bit on how to interact with CSS properties from the DOM.
